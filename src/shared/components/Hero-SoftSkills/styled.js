@@ -46,4 +46,15 @@ export const C_Hero_Soft = styled.section`
       /* display: none; */
     }
   }
+  @media (max-width: 500px) {
+    .container.soft {
+      .title {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .container.image {
+      /* display: none; */
+    }
+  }
 `;

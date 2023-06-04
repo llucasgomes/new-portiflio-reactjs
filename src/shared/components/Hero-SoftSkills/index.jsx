@@ -3,12 +3,12 @@ import { C_Hero_Soft } from "./styled";
 
 export const Hero_SoftSkills = () => {
   const list_soft = [
-    "Bom relacionamento interpessoal para o trabalho em equipe.",
+    "Bom trabalho em equipe.",
     "Comunicação",
     "Proativo.",
     "Resiliente e flexível.",
     "Organizado.",
-    "Capacidade analítica e de resolução de problemas.",
+    "Capacidade em resolução de problemas.",
   ];
 
   return (
