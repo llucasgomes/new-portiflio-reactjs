@@ -32,10 +32,10 @@ export const NavBar = () => {
           <Link className="item" to={"projects"}>
             Projetos
           </Link>
-          <Link className="item" to={"projects"}>
+          <Link className="item" to={"skills"}>
             Habilidades
           </Link>
-          <Link className="item" to={"projects"}>
+          <Link className="item" to={"about"}>
             Sobre
           </Link>
         </ul>
