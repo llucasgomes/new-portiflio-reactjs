@@ -10,7 +10,11 @@ export const DataContext = createContext();
 export const DataContextProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [navbar, setNavbar] = useState(false);
+  const [menu_mobile, menu_setMobile] = useState(false);
   const [isFetching, setIsFetching] = useState(true); //armazenar dados de retorno da API
+
+  
 
   //LISTAR  - GETS ==============================================
 
@@ -36,7 +40,17 @@ export const DataContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <DataContext.Provider value={{ projects, skills, isFetching }}>
+    <DataContext.Provider
+      value={{
+        projects,
+        skills,
+        isFetching,
+        navbar,
+        setNavbar,
+        menu_mobile,
+        menu_setMobile,
+      }}
+    >
       {children}
     </DataContext.Provider>
   );
