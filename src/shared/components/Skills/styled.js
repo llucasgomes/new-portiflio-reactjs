@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container_Habilidade = styled.div`
   width: 100%;
 
-  padding: 2rem;
+  padding: 6rem 0 2rem 0;
 
   .title {
     width: 100%;
