@@ -44,7 +44,7 @@ export const C_Hero_Soft = styled.section`
       padding: 0 1rem;
     }
     .container.image {
-      display: none;
+      /* display: none; */
     }
   }
 `;
