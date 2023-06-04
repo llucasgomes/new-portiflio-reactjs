@@ -9,6 +9,7 @@ export const DataContext = createContext();
 
 export const DataContextProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
+  const [skills, setSkills] = useState([]);
   const [isFetching, setIsFetching] = useState(true); //armazenar dados de retorno da API
 
   //LISTAR  - GETS ==============================================
@@ -20,8 +21,22 @@ export const DataContextProvider = ({ children }) => {
       .finally(() => setIsFetching(false));
   }, []);
 
+  //GET SKILLS
+  useEffect(() => {
+    // conexao com a API
+
+    API.get("/skills")
+      .then((response) => setSkills(response.data))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      })
+      .finally(() => {
+        setIsFetching(false);
+      });
+  }, []);
+
   return (
-    <DataContext.Provider value={{ projects, isFetching }}>
+    <DataContext.Provider value={{ projects, skills, isFetching }}>
       {children}
     </DataContext.Provider>
   );
