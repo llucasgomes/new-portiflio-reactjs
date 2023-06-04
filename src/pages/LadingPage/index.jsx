@@ -1,17 +1,31 @@
+import { useContext } from "react";
 import { NavBar } from "../../shared/components/Navbar";
-import { Hero } from "../../shared/components/Hero";
-import { Hero_Skills } from "../../shared/components/Hero_Skills";
-import { Hero_SoftSkills } from "../../shared/components/Hero-SoftSkills";
-import { Footer } from "../../shared/components/Footer";
+import { Outlet } from "react-router-dom";
+import { DataContext } from "../../shared/context/DataContext";
+import { Container_Loading } from "./styled";
+
+import ReactLoading from "react-loading";
 
 export const Home = () => {
+  const { isFetching } = useContext(DataContext);
   return (
     <>
-      <NavBar />
-      <Hero />
-      <Hero_Skills />
-      <Hero_SoftSkills />
-      <Footer />
+      {isFetching ? (
+        <Container_Loading>
+          <ReactLoading
+            type={"spin"}
+            color={"#7279f9"}
+            height={100}
+            width={100}
+          />
+        </Container_Loading>
+      ) : (
+        <>
+          {" "}
+          <NavBar />
+          <Outlet />
+        </>
+      )}
     </>
   );
 };
