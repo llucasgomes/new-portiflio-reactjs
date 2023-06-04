@@ -1,43 +1,29 @@
-import { C_Projects } from "./styled";
-import { motion } from "framer-motion";
+import { useContext } from "react";
+import { Card_Project } from "../Cards/Card-Projects";
+import { Container_Portifolio } from "./styled";
+import { DataContext } from "../../context/DataContext";
 
-import Html_CSS from "../../../assets/images/html5-css3.png";
-import Js from "../../../assets/images/javascript.png";
-import Angular from "../../../assets/images/angular.png";
-import Reacjs from "../../../assets/images/reactjs.png";
-import Typescript from "../../../assets/images/ts_logo.png";
-import Vue from "../../../assets/images/vue.png";
-import Agile from "../../../assets/images/agile.png";
-import { useEffect, useRef, useState } from "react";
-
-export const Hero_Projects = () => {
-  const imagens = [Html_CSS, Js, Angular, Reacjs, Typescript, Vue, Agile];
-  const [width, setWidth] = useState(0);
-
-  const carrousel = useRef();
-
-  useEffect(() => {
-    console.log(carrousel.current?.scrollWidth, carrousel.current?.offsetWidth);
-    setWidth(carrousel.current?.scrollWidth - carrousel.current?.offsetWidth);
-  }, []);
+export const Portifolio = () => {
+  const { projects } = useContext(DataContext);
   return (
-    <C_Projects>
-      <div className="container">
-        <motion.div className="carrousel" whileTap={{ cursor: "grabbing" }}>
-          <motion.div
-            className="inner"
-            drag="x"
-            ref={carrousel}
-            dragConstraints={{ right: 0, left: -width }}
-          >
-            {imagens.map((item, index) => (
-              <motion.div className="item" key={index}>
-                <img src={item} alt="imagens" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </div>
-    </C_Projects>
+    <Container_Portifolio>
+      <h1 className="title">Projetos</h1>
+      <h2 className="sub-title">
+        Essas são as principais projetos, podendo conferir todos meus
+        repositorios e projetos no GitHub.
+      </h2>
+      <section className="container-skills">
+        {projects.map((item) => (
+          <Card_Project
+            key={item.id}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            github={item.github}
+            page={item.page}
+          />
+        ))}
+      </section>
+    </Container_Portifolio>
   );
 };
