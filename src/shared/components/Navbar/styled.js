@@ -34,12 +34,14 @@ export const Header = styled.header`
     list-style-type: none;
     gap: 1rem;
 
-    li {
+    .item {
       font-size: 1.2rem;
       font-weight: 500;
       padding: 0.5rem 1rem;
       text-align: center;
       font-weight: 500;
+      text-decoration: none;
+      color: #000;
 
       &:hover {
         cursor: pointer;

@@ -2,6 +2,7 @@ import { Header } from "./styled";
 import Logo from "../../../assets/images/logo.png";
 import { List, X } from "phosphor-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const [menu, setMenu] = useState(false);
@@ -28,9 +29,15 @@ export const NavBar = () => {
       </div>
       <nav>
         <ul className="nav-list">
-          <li>Projetos</li>
-          <li>Habilidades</li>
-          <li>Sobre</li>
+          <Link className="item" to={"projects"}>
+            Projetos
+          </Link>
+          <Link className="item" to={"projects"}>
+            Habilidades
+          </Link>
+          <Link className="item" to={"projects"}>
+            Sobre
+          </Link>
         </ul>
       </nav>
     </Header>
