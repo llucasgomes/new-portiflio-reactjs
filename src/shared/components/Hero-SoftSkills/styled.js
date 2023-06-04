@@ -7,11 +7,10 @@ export const C_Hero_Soft = styled.section`
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  gap: 1rem;
 
   .container.image {
     width: 40%;
-    height: 70%;
+    height: auto;
 
     img {
       width: 100%;
