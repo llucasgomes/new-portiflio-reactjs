@@ -1,5 +1,6 @@
 import { GithubLogo, LinkedinLogo, WhatsappLogo } from "phosphor-react";
 import { C_Footer } from "./styled";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -12,19 +13,39 @@ export const Footer = () => {
           sapiente labore, vitae numquam fugit neque id saepe tempora optio.
         </p>
         <ul className="sociais">
-          <li className="sociais--item">
+          <Link
+            to={"https://www.linkedin.com/in/llucasgomess/"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sociais--item"
+          >
             <LinkedinLogo size={42} color="#ffffff" weight="regular" />
-          </li>
-          <li className="sociais--item">
+          </Link>
+          <Link
+            to={"https://github.com/llucasgomes"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sociais--item"
+          >
             <GithubLogo size={42} color="#ffffff" weight="regular" />
-          </li>
-          <li className="sociais--item">
+          </Link>
+          <Link
+            to={
+              "https://api.whatsapp.com/send?phone=5592988471665&text=Gostei%20de%20seu%20Portifolio%0APodemos%20Conversar"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sociais--item"
+          >
             <WhatsappLogo size={42} color="#ffffff" weight="regular" />
-          </li>
+          </Link>
         </ul>
       </div>
       <div className="footer-bottom">
-        <p>copyrigth &copy; 2023 </p>
+        <p>copyrigth &copy; 2023 </p>{" "}
+        <Link to={"/dashboard"} className="login">
+          login
+        </Link>
       </div>
     </C_Footer>
   );

@@ -43,5 +43,16 @@ export const C_Footer = styled.footer`
     background-color: #000;
     text-align: center;
     padding: 1rem 0;
+    position: relative;
+
+    .login {
+      position: absolute;
+      width: 50px;
+      background-color: #000;
+      cursor: pointer;
+      right: 50px;
+      top: 50%;
+      color: #000;
+    }
   }
 `;
