@@ -77,7 +77,7 @@ export const Header = styled.header`
     nav {
       display: ${(props) => (!props.mobile ? "none" : "block")};
       .nav-list {
-        width: 50vw;
+        width: 70%;
         height: 100vh;
         flex-direction: column;
         position: absolute;
@@ -109,7 +109,8 @@ export const Header = styled.header`
         }
         .item {
           display: block;
-          font-size: 1.3rem;
+          font-size: 1.6rem;
+          padding: 0.5rem 0;
           &:hover {
             background-color: red;
           }
