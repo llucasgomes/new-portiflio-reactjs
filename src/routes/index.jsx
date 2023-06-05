@@ -6,6 +6,7 @@ import { Hero_Skills } from "../shared/components/Hero_Skills";
 import { Hero_SoftSkills } from "../shared/components/Hero-SoftSkills";
 import { Footer } from "../shared/components/Footer";
 import { Habilidades } from "../shared/components/Skills";
+import { Dashboard } from "../pages/Dasboard";
 
 export const Rotas = createBrowserRouter([
   {
@@ -32,5 +33,9 @@ export const Rotas = createBrowserRouter([
         element: <Habilidades />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
   },
 ]);
