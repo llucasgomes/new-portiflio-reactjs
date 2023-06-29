@@ -47,14 +47,14 @@ export const NavBar = () => {
               onClick={() => menu_setMobile(!menu_mobile)}
             />
           </span>
+          <Link className="item" to={"/"} onClick={() => handleGo()}>
+            Home
+          </Link>
           <Link className="item" to={"projects"} onClick={() => handleGo()}>
             Projetos
           </Link>
           <Link className="item" to={"skills"} onClick={() => handleGo()}>
             Habilidades
-          </Link>
-          <Link className="item" to={"about"} onClick={() => handleGo()}>
-            Sobre
           </Link>
         </ul>
       </nav>

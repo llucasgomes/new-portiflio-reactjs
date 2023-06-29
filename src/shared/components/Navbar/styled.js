@@ -82,8 +82,8 @@ export const Header = styled.header`
         flex-direction: column;
         position: absolute;
         right: -50vw;
-        animation: ${(props) => (props.mobile ? "show" : "hide")} 1s ease-in
-          forwards;
+        animation: ${(props) => (props.mobile ? "show" : "hide")} 0.5s
+          ease-in-out forwards;
         animation-iteration-count: 1;
 
         top: 0;
@@ -112,7 +112,7 @@ export const Header = styled.header`
           font-size: 1.6rem;
           padding: 0.5rem 0;
           &:hover {
-            background-color: red;
+            background-color: #5d757d;
           }
         }
       }
