@@ -29,4 +29,7 @@ export const Container_Card_Skill = styled.div`
     padding: 0.5rem 0.4rem;
     text-align: center;
   }
+  @media (max-width: 450px) {
+    width: 19rem;
+  }
 `;
