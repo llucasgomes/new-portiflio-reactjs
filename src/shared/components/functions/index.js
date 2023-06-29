@@ -5,3 +5,6 @@ export const Top = () => {
   });
 };
 
+export function refreshPage() {
+  window.location.reload(false);
+}

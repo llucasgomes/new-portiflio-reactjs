@@ -54,14 +54,20 @@ export const Modal_Habilidades = ({ setOpenModal }) => {
       .post("https://api-msql.vercel.app/skills", formData)
       .then((res) => {
         setIsFetching(true);
-        setOpenModal(false);
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setOpenModal(false);
+        refreshPage();
       });
-
-    setSubmitting(false);
+    setSubmitting(true);
   };
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <Container_Modal>
       <div className="modalContainer">

@@ -1,6 +1,6 @@
 import { Pencil, Trash } from "phosphor-react";
 import { Container_Tabela } from "./styled";
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { DataContext } from "../../../context/DataContext";
 import { API } from "../../../services/API.js";
 
@@ -9,10 +9,18 @@ export const Table_Habilidade = ({ titles, isFetching }) => {
 
   function handleDelete(id) {
     API.delete(`/skills/${id}`)
-      .then((res) => setIsFetching(true))
+      .then((res) => {
+        setIsFetching(true);
+      })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
+      })
+      .finally(() => {
+        refreshPage();
       });
+  }
+  function refreshPage() {
+    window.location.reload(false);
   }
 
   return (
