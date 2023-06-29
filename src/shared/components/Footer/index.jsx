@@ -8,9 +8,8 @@ export const Footer = () => {
       <div className="footer-content">
         <h3>Lucas Gomes</h3>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, ad!
-          Sit velit earum quo vero, dolorem facilis corporis quibusdam itaque
-          sapiente labore, vitae numquam fugit neque id saepe tempora optio.
+          Sempre foi minha paixão atuar na área tecnológica, estou em um período
+          de transição de carreira, cursando Full Stack Jr e DevQuest.
         </p>
         <ul className="sociais">
           <Link
